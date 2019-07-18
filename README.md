@@ -2,7 +2,7 @@
 
 ![](http://upload-images.jianshu.io/upload_images/2552605-04d65b77a17a4a1e?imageMogr2/auto-orient/strip)
 
-昨天跟着视频学了如何自定义View并做成仿360悬浮球与加速球的样式
+如何自定义View并做成仿360悬浮球与加速球的样式
 
 可以看出来，做成的效果有：
 
@@ -197,12 +197,6 @@ public class StartFloatBallService extends Service {
         }else{
             showFloatBall();
         }
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        showFloatBallV2();
     }
 
     @Override
