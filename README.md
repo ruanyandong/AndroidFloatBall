@@ -182,10 +182,40 @@ public class StartFloatBallService extends Service {
 }
 ```
 
-此时，只要为MainActivity添加一个按钮，并设定当点击按钮后开启Service，此时即可看到屏幕显示了一个悬浮球
+此时，只要为MainActivity添加一个按钮，在Manifest文件里声明SYSTEM_ALERT_WINDOW权限，并设定当点击按钮后开启Service，此时即可看到屏幕显示了一个悬浮球
 
 ```java
     public void startService(View view) {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (!Settings.canDrawOverlays(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivityForResult(intent, 1);
+            } else {
+                showFloatBall();
+            }
+        }else{
+            showFloatBall();
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        showFloatBallV2();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.d("RYD","onActivityResult");
+        if (requestCode == 1){
+            Log.d("RYD","请求码等于"+requestCode);
+            Log.d("RYD","结果码等于"+resultCode);
+        }
+    }
+
+    private void showFloatBall() {
         Intent intent = new Intent(this, StartFloatBallService.class);
         startService(intent);
         finish();
@@ -527,4 +557,4 @@ public class FloatMenu extends LinearLayout {
 }
 ```
 
-这里提供源代码下载：https://github.com/leavesC/FloatBall
+这里提供源代码下载：https://github.com/ruanyandong/AndroidFloatBall
