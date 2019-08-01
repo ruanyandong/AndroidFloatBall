@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleTextView">
+        <attr name="storkColor" format="color"/>
+        <attr name="backColor" format="color"/>
+        <attr name="storkWidth" format="dimension"/>
+    </declare-styleable>
+</resources>

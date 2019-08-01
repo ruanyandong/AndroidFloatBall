@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:id="@+id/floatball_layout"
+    android:background="@drawable/floatball_blue_bg">
+
+    <ImageView
+        android:id="@+id/fengshan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/floatball_fengshan_small"/>
+    <ImageView
+        android:id="@+id/shuazi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/floatball_shuazi_small"/>
+
+</FrameLayout>

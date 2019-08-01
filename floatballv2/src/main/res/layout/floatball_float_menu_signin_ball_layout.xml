@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:id="@+id/floatball_float_menu_signin_ball_layout"
+    android:background="@drawable/floatball_float_menu_sign_in_bg">
+
+    <ImageView
+        android:id="@+id/sign_in_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/floatball_gold_sign_in"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/gold_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="400"
+        android:layout_gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        />
+
+</FrameLayout>

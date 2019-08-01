@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/floatball_float_menu_garbage_ball_layout"
+    android:background="@drawable/floatball_float_menu_grabege_ball_blue_bg">
+
+    <ImageView
+        android:id="@+id/fengshan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/floatball_fengshan_big"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/shuazi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/floatball_shuazi_big"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/garbage_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100M"
+        android:textColor="#ffffffff"
+        android:textSize="17sp"
+        android:layout_gravity="center"/>
+
+</FrameLayout>

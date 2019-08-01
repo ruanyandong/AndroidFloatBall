@@ -24,6 +24,11 @@
             android:name=".service.StartFloatBallService"
             android:enabled="true"
             android:exported="false" />
+        <!--
+            android:enabled="true"是否能被实例化
+            android:exported="false"是否支持其它应用调用当前组件。
+            默认值：如果包含有intent-filter 默认值为true; 没有intent-filter默认值为false。
+        -->
     </application>
 
 </manifest>

@@ -55,7 +55,7 @@ public class FloatBall extends View {
         textPaint.setTextSize(25);
         textPaint.setColor(Color.WHITE);
         textPaint.setAntiAlias(true);
-        textPaint.setFakeBoldText(true);
+        textPaint.setFakeBoldText(true);//true为粗体，false为非粗体
 
         Bitmap src = BitmapFactory.decodeResource(getResources(), R.drawable.ninja);
         //将图片裁剪到指定大小
@@ -73,6 +73,8 @@ public class FloatBall extends View {
             canvas.drawCircle(width / 2, height / 2, width / 2, ballPaint);
             float textWidth = textPaint.measureText(text);
             Paint.FontMetrics fontMetrics = textPaint.getFontMetrics();
+            // ascent：字符最高点到baseline的推荐距离
+            // descent：字符最低点到baseline的推荐距离
             float dy = -(fontMetrics.descent + fontMetrics.ascent) / 2;
             canvas.drawText(text, width / 2 - textWidth / 2, height / 2 + dy, textPaint);
         } else {

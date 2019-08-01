@@ -19,7 +19,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="https://www.jianshu.com/u/9df45b87cfdf" />
+            android:text="趣头条" />
 
         <leavesc.hello.floatball.view.ProgressBall
             android:layout_width="wrap_content"

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.PixelFormat;
 import android.graphics.Point;
 import android.os.Build;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -125,7 +126,8 @@ public class ViewManager {
         if (floatBallParams == null) {
             floatBallParams = new LayoutParams();
             floatBallParams.width = floatBall.width;
-            floatBallParams.height = floatBall.height - getStatusHeight();
+            floatBallParams.height = floatBall.height- getStatusHeight();
+            Log.d("状态栏高度","===="+getStatusHeight());
             floatBallParams.gravity = Gravity.TOP | Gravity.START;
             floatBallParams.flags = LayoutParams.FLAG_NOT_FOCUSABLE | LayoutParams.FLAG_NOT_TOUCH_MODAL;
             floatBallParams.format = PixelFormat.RGBA_8888;
